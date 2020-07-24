@@ -28,7 +28,7 @@ class Text(object):
     # 日志
     def logging(self, level, text):
         shijian = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        self.log = self.log + shijian + "  " + level + "  " + text + "\n"
+        self.log = self.log + shijian + "  " + level + "  " + str(text) + "\n"
 
     def uploadmessage(self):
 
@@ -40,12 +40,12 @@ class Text(object):
                 upload_message = Utils.load_upload_message_file(self.message_file)
                 UpLoadMsg = Utils.upload_ncov_message(cookie, upload_message=upload_message)
                 if UpLoadMsg == "ok":
-                    print(upload_message)
+                    # print(upload_message)
                     self.logging("INFO",upload_message)
                     self.msg = str(upload_message)
                     self.successflag = '成功'
                 else:
-                    print(UpLoadMsg)
+                    # print(UpLoadMsg)
                     self.logging("ERROR",UpLoadMsg)
                     self.msg = str(UpLoadMsg)
 
@@ -124,7 +124,8 @@ class Text(object):
             print("数据错误，请检查 相关信息.ini")
             self.logging("ERROR", "数据错误，请检查 相关信息.ini")
 
-        except:
+        except Exception as e:
+            print(e)
             print("未知错误")
             self.msg = '！！！ 未知错误 ！！！ 赶快手动填 ！！！'
             self.logging("ERROR", "！！！ 未知错误 ！！！ 赶快手动填 ！！！")
@@ -139,3 +140,4 @@ def main_handler(agrs1,agrs2):
     Text().main()
 
 
+# Text().main()
