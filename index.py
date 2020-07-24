@@ -40,10 +40,12 @@ class Text(object):
                 upload_message = Utils.load_upload_message_file(self.message_file)
                 UpLoadMsg = Utils.upload_ncov_message(cookie, upload_message=upload_message)
                 if UpLoadMsg == "ok":
+                    print(upload_message)
                     self.logging("INFO",upload_message)
                     self.msg = str(upload_message)
                     self.successflag = '成功'
                 else:
+                    print(UpLoadMsg)
                     self.logging("ERROR",UpLoadMsg)
                     self.msg = str(UpLoadMsg)
 
