@@ -1,6 +1,6 @@
 # 晨午晚检自动填报工具
 
-#### 本代码缝合了https://github.com/abadfox233/ncov 和 https://github.com/ZimoLoveShuang/auto-submit 两位大佬的作品，仅供学习交流使用，请在下载2小时内删除
+#### 本代码缝合了https://github.com/abadfox233/ncov 和 https://github.com/ZimoLoveShuang/auto-submit 和 https://github.com/Han0nly/ncov 三位大佬的作品，仅供学习交流使用，请在下载2小时内删除
 
 #### 本项目仅供学习交流使用，如作他用所承受的任何直接、间接法律责任一概与作者无关
 
