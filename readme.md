@@ -1,4 +1,4 @@
-# 西安电子科技大学晨午晚检自动填报工具
+# 晨午晚检自动填报工具
 
 #### 本代码缝合了https://github.com/abadfox233/ncov 和 https://github.com/ZimoLoveShuang/auto-submit 两位大佬的作品，仅供学习交流使用，请在下载2小时内删除
 
